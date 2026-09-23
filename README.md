@@ -227,6 +227,20 @@ gito review
 > Files that are not staged for commit will be ignored.  
 > See `gito --help` for more options.
 
+**Reviewing specific files in full**
+
+To review the entire content of selected files as they are in your working copy (not just the changes), compare the working copy against Git's empty tree and select the files with `--filters`:
+```bash
+gito review --against 4b825dc642cb6eb9a060e54bf8d69288fbee4904 --no-merge-base --filters="src/app.py,src/utils/*.py"
+```
+- `4b825dc…` is Git's well-known empty tree hash, so every file appears as new and is reviewed in full. `--no-merge-base` is required because the empty tree has no history.
+- Filters are comma-separated glob patterns matched against paths relative to the repository root: `src/app.py`, not `app.py`. `*` also matches across folders, so `*.md` selects Markdown files at any depth.
+- Uncommitted changes are included; new (untracked) files must be staged with `git add` first.
+- On Windows, pass wildcard patterns as `--filters="..."`: the short `-f "src/*.py"` form may be expanded into file names and fail with *Got unexpected extra arguments*.
+- The same options work with `gito files` (preview the selection without calling the LLM) and `gito ask`.
+
+> **Note:** `--all` is not a substitute here: it takes files from the repository's default branch (e.g. `origin/main`), so files that exist only on your branch or in your working copy won't be found.
+
 **Reviewing remote repository**
 ```bash
 gito remote git@github.com:owner/repo.git <FEATURE_BRANCH>..<MAIN_BRANCH>

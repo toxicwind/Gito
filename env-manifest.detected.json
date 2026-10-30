@@ -1,0 +1,89 @@
+{
+  "product": "gito",
+  "path": "/home/toxic/pens/ranch/products/gito",
+  "files": 87,
+  "detected_at": "2026-10-30T06:11:09.743860Z",
+  "env_vars": {
+    "CI_COMMIT_BRANCH": [
+      "utils/git_platform/gitlab.py"
+    ],
+    "CI_COMMIT_REF_NAME": [
+      "issue_trackers.py"
+    ],
+    "CI_MERGE_REQUEST_IID": [
+      "commands/gitlab_post_review_comment.py"
+    ],
+    "CI_MERGE_REQUEST_SOURCE_BRANCH_NAME": [
+      "utils/git_platform/gitlab.py"
+    ],
+    "CI_PROJECT_ID": [
+      "commands/gitlab_post_review_comment.py"
+    ],
+    "GH_TOKEN": [
+      "gh_api.py"
+    ],
+    "GITHUB_ACTIONS": [
+      "core.py",
+      "utils/git_platform/github.py"
+    ],
+    "GITHUB_BASE_REF": [
+      "core.py"
+    ],
+    "GITHUB_HEAD_REF": [
+      "utils/git_platform/github.py"
+    ],
+    "GITHUB_REF": [
+      "utils/git_platform/github.py"
+    ],
+    "GITHUB_TOKEN": [
+      "gh_api.py"
+    ],
+    "GITHUB_WORKFLOW_REF": [
+      "bootstrap.py"
+    ],
+    "GITLAB_ACCESS_TOKEN": [
+      "gitlab_api.py"
+    ],
+    "GITLAB_BASE_URL": [
+      "gitlab_api.py"
+    ],
+    "GITLAB_CI": [
+      "utils/git_platform/gitlab.py"
+    ],
+    "GITLAB_TOKEN": [
+      "gitlab_api.py"
+    ],
+    "JIRA_API_KEY": [
+      "pipeline_steps/jira.py"
+    ],
+    "JIRA_API_TOKEN": [
+      "pipeline_steps/jira.py"
+    ],
+    "JIRA_EMAIL": [
+      "pipeline_steps/jira.py"
+    ],
+    "JIRA_TOKEN": [
+      "pipeline_steps/jira.py"
+    ],
+    "JIRA_URL": [
+      "pipeline_steps/jira.py"
+    ],
+    "JIRA_USER": [
+      "pipeline_steps/jira.py"
+    ],
+    "JIRA_USERNAME": [
+      "pipeline_steps/jira.py"
+    ],
+    "LINEAR_API_KEY": [
+      "commands/linear_comment.py",
+      "pipeline_steps/linear.py"
+    ],
+    "LLM_API_TYPE": [
+      "tests/conftest.py"
+    ],
+    "PR_NUMBER_FROM_WORKFLOW_DISPATCH": [
+      "cli.py",
+      "commands/gh_post_review_comment.py"
+    ]
+  }
+}
